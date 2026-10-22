@@ -1,0 +1,16 @@
+.ds-tag {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs-size);
+  line-height: var(--text-xs-line);
+  font-weight: var(--text-label-weight);
+  color: var(--color-text);
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-1);
+}
+.ds-tag--neutral { border-color: var(--color-border); }
+.ds-tag--lavender { background: var(--color-tint-lavender); }
+.ds-tag--mint { background: var(--color-tint-mint); }
+.ds-tag--sky { background: var(--color-tint-sky); }

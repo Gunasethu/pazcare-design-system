@@ -1,0 +1,32 @@
+.ds-input { display: grid; gap: var(--space-1); }
+.ds-input__label {
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line);
+  font-weight: var(--text-label-weight);
+}
+.ds-input__field {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm-size);
+  line-height: var(--text-sm-line);
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2);
+  padding: var(--space-2) var(--space-3);
+  transition: border-color var(--duration-base) var(--ease-standard);
+}
+.ds-input__field::placeholder { color: var(--color-text-muted); }
+.ds-input__field:hover { border-color: var(--color-text-muted); }
+.ds-input__field:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-color: var(--color-text);
+}
+.ds-input__field--error { border-color: var(--color-danger); }
+.ds-input__message {
+  margin: 0;
+  font-size: var(--text-xs-size);
+  line-height: var(--text-xs-line);
+  color: var(--color-text-muted);
+}
+.ds-input__message--error { color: var(--color-danger); }
