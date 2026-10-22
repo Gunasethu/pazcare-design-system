@@ -1,0 +1,68 @@
+:root {
+  /* ---------- COLOR (extracted) ---------- */
+  --color-bg: #FFFFFF;
+  --color-border: #D4D4D4;
+  --color-text: #242424;
+  --color-text-muted: #7A7A7A;
+  --color-tint-lavender: #F0EDFF;
+  --color-tint-mint: #DFF5F5;
+  --color-tint-sky: #E3F1FF;
+
+  /* COLOR (proposed) */
+  --color-text-inverse: #FFFFFF;   /* text on dark buttons */
+  --color-danger: #C62828;         /* errors, destructive actions */
+  --color-focus-ring: #242424;     /* keyboard focus outline */
+
+  /* ---------- TYPE (extracted) ---------- */
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+
+  --text-body-size: 18px;
+  --text-body-line: 30px;
+  --text-body-tracking: -0.18px;   /* TO CONFIRM, see below */
+  --text-body-weight: 400;
+
+  --text-h1-size: 36px;
+  --text-h1-line: 1.4;
+  --text-h1-tracking: -0.04em;
+  --text-h1-weight: 700;
+
+  --text-h2-size: 24px;
+  --text-h2-line: 1.4;
+  --text-h2-tracking: -0.04em;
+  --text-h2-weight: 700;
+
+  /* TYPE (proposed) */
+  --text-sm-size: 14px;
+  --text-sm-line: 22px;
+  --text-xs-size: 12px;
+  --text-xs-line: 18px;
+  --text-label-weight: 600;
+
+  /* ---------- SPACING (extracted) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  /* SPACING (proposed) */
+  --space-6: 48px;
+  --space-7: 64px;
+
+  /* ---------- RADIUS (extracted) ---------- */
+  --radius-0: 0px;
+  --radius-1: 4px;
+  --radius-2: 8px;
+  /* RADIUS (proposed) */
+  --radius-full: 9999px;           /* avatars, pills */
+
+  /* ---------- ELEVATION ---------- */
+  --shadow-1: 0 0 2px 1px #E0E0E0;                 /* extracted */
+  --shadow-2: 0 8px 24px rgba(36, 36, 36, 0.12);   /* proposed: modals, sheets */
+
+  /* ---------- MOTION (all proposed) ---------- */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+}
