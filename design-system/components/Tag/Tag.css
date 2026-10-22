@@ -4,7 +4,7 @@
   font-family: var(--font-sans);
   font-size: var(--text-xs-size);
   line-height: var(--text-xs-line);
-  font-weight: var(--text-label-weight);
+  font-weight: var(--text-body-weight);
   color: var(--color-text);
   padding: var(--space-1) var(--space-2);
   border: 1px solid transparent;
