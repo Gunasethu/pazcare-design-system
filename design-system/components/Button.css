@@ -26,7 +26,6 @@
   background: var(--color-bg);
   color: var(--color-text);
   border-color: var(--color-border);
-  box-shadow: var(--shadow-1);
 }
 .ds-button--secondary:hover { background: var(--color-tint-lavender); }
 .ds-button--ghost {
