@@ -1,3 +1,11 @@
+## Reach for these first
+
+- Any top bar, tabs or sidebar: Nav, not custom links
+- Any person, profile or account: Avatar, not a styled circle
+- Any label, count or status: Tag
+- Any repeated rows: List and ListItem
+- Any overlay: Modal (`variant="sheet"` on narrow screens)
+
 # Components
 
 Source of truth is the code in `design-system/components/`. If this file and the code disagree, the code wins. Import everything from `design-system/components`.
