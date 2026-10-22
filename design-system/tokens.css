@@ -12,6 +12,7 @@
   --color-text-inverse: #FFFFFF;   /* text on dark buttons */
   --color-danger: #C62828;         /* errors, destructive actions */
   --color-focus-ring: #242424;     /* keyboard focus outline */
+  --color-overlay: rgba(36, 36, 36, 0.4);  /* proposed: modal backdrop */
 
   /* ---------- TYPE (extracted) ---------- */
   --font-sans: "Instrument Sans", system-ui, sans-serif;
