@@ -13,7 +13,7 @@ A design system extracted from my portfolio, a reusable skill that lets an AI ag
 
 `npm install`, then `npm run dev`. The top navigation lists the design system and every layout in `products/`. New layouts appear automatically.
 
-## Try the skill
+# Try the skill
 
 1. Open this folder in Codex. It finds the skill at `.agents/skills/portfolio-design-system`, which links to `skills/portfolio-design-system`.
 2. Give it a brief, for example: `Use $portfolio-design-system to design <product>.`
