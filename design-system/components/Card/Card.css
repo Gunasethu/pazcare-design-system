@@ -4,6 +4,3 @@
   box-shadow: var(--shadow-1);
   padding: var(--space-4);
 }
-.ds-card--lavender { background: var(--color-tint-lavender); box-shadow: none; }
-.ds-card--mint { background: var(--color-tint-mint); box-shadow: none; }
-.ds-card--sky { background: var(--color-tint-sky); box-shadow: none; }

@@ -1,5 +1,4 @@
 .ds-list { list-style: none; margin: 0; padding: 0; }
-.ds-list--divided .ds-list__item + .ds-list__item { border-top: 1px solid var(--color-border); }
 .ds-list__row {
   display: flex;
   align-items: center;
@@ -17,12 +16,12 @@
   cursor: pointer;
   transition: background var(--duration-base) var(--ease-standard);
 }
-.ds-list__row--interactive:hover { background: var(--color-tint-lavender); }
+.ds-list__row--interactive:hover { background: var(--color-surface-hover); }
 .ds-list__row--interactive:focus-visible {
   outline: 2px solid var(--color-focus-ring);
   outline-offset: -2px;
 }
-.ds-list__item--selected .ds-list__row { background: var(--color-tint-lavender); }
+.ds-list__item--selected .ds-list__row { color: var(--color-text); }
 .ds-list__item--selected .ds-list__title { font-weight: var(--text-label-weight); }
 .ds-list__leading, .ds-list__trailing { flex-shrink: 0; display: inline-flex; }
 .ds-list__body { flex: 1; min-width: 0; display: grid; }

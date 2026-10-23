@@ -1,8 +1,8 @@
 import './Card.css';
 
-export function Card({ tint, as: Component = 'div', children, className = '', ...props }) {
+export function Card({ as: Component = 'div', children, className = '', ...props }) {
   return (
-    <Component className={`ds-card${tint ? ` ds-card--${tint}` : ''}${className ? ` ${className}` : ''}`} {...props}>
+    <Component className={`ds-card${className ? ` ${className}` : ''}`} {...props}>
       {children}
     </Component>
   );

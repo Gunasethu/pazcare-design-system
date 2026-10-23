@@ -31,9 +31,6 @@ export default function App() {
       <h2>Card</h2>
       <div style={row}>
         <Card>Plain card</Card>
-        <Card tint="lavender">Lavender</Card>
-        <Card tint="mint">Mint</Card>
-        <Card tint="sky">Sky</Card>
       </div>
 
       <h2>Tag</h2>

@@ -1,8 +1,8 @@
 import './List.css';
 
-export function List({ divided = true, children, ...props }) {
+export function List({ children, ...props }) {
   return (
-    <ul className={`ds-list${divided ? ' ds-list--divided' : ''}`} {...props}>
+    <ul className="ds-list" {...props}>
       {children}
     </ul>
   );

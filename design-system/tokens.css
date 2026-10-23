@@ -4,6 +4,8 @@
   --color-border: #D4D4D4;
   --color-text: #242424;
   --color-text-muted: #7A7A7A;
+  --color-text-hover: #404040; /* hover gray, between muted and ink */
+  --color-surface-hover: #F0F0F0;
   --color-tint-lavender: #F0EDFF;
   --color-tint-mint: #DFF5F5;
   --color-tint-sky: #E3F1FF;
@@ -37,7 +39,7 @@
   --text-sm-line: 22px;
   --text-xs-size: 12px;
   --text-xs-line: 18px;
-  --text-label-weight: 600;
+  --text-label-weight: 500;
 
   /* ---------- SPACING (extracted) ---------- */
   --space-1: 4px;

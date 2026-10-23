@@ -21,8 +21,8 @@ Source of truth is the code in `design-system/components/`. If this file and the
 - Always give inputs a label.
 
 ## Card
-- Props: `tint` (`lavender` | `mint` | `sky`, or none), `as`.
-- A plain card has the soft outline shadow. A tinted card has color and no shadow.
+- Props: `as`.
+- Plain cards use the soft outline shadow.
 - A card is a distinct thing (a book, a stat, a project). Don't nest cards. Don't wrap everything in cards.
 
 ## Tag
@@ -31,12 +31,12 @@ Source of truth is the code in `design-system/components/`. If this file and the
 
 ## Nav
 - Props: `items` (`{ label, href, active, onClick, trailing }`), `orientation` (`horizontal` | `vertical`), `label`.
-- The active item gets the lavender tint and semibold text. `trailing` holds things like unread counts.
+- Default text is muted gray, hover uses a subtle gray surface, and active text uses ink with medium weight. `trailing` holds things like unread counts.
 
 ## List and ListItem
-- `List` props: `divided`.
+- `List` has no additional props beyond normal `<ul>` props.
 - `ListItem` props: `leading`, `title`, `description`, `trailing`, `selected`, `onClick`. With `onClick` the row becomes a button.
-- Rows are separated by hairlines, not boxes. Use List for repeated rows of the same shape.
+- Hover rows use the same subtle gray surface as Nav. Selected rows use ink with medium weight. Rows have no divider lines. Use List for repeated rows of the same shape.
 
 ## Modal
 - Props: `open`, `onClose`, `title`, `footer`, `variant` (`modal` | `sheet`).

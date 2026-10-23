@@ -1,50 +1,35 @@
 ---
 name: portfolio-design-system
-description: Build any new interface (app screens, pages, layouts, components) in Gunasethu's portfolio design system: light, airy, near-monochrome, Instrument Sans, hairline borders, soft pastel tints, no brand color. Use whenever asked to design, lay out or mock up a UI, screen or product in this style, including products the system has never covered.
+description: Build any new interface (app screens, pages, layouts, components) in Gunasethu's portfolio design system: light, calm, mostly white, near-black text, thin borders, small corners, Instrument Sans, no brand color. Use whenever asked to design, lay out or mock up a UI, screen or product in this style, including products the system has never covered.
 ---
 
 # Portfolio design system
 
-Build interfaces that read as unmistakably this system. The code in this repo is the source of truth. This skill explains how to use it.
+Design interfaces that look like this system: calm, mostly white, thin borders, small corners, one thing leading at a time. The code in this repo is the source of truth.
 
-## Before designing anything
+## Read first
 
-1. Read `design-system/tokens.css`. Every color, type size, space, radius, shadow and duration you may use is there.
-2. Read `design-system/components/index.js`, then the folders of the components you plan to use.
-3. Read `references/principles.md` (the look and the rules) and `references/components.md` (what exists and when to use it).
-4. If the product needs a pattern the system has no component for (dense threads, long lists, data-heavy pages), read `references/extending.md` before designing.
+1. `design-system/tokens.css`: every value you may use
+2. `design-system/components/`: what already exists
+3. `references/principles.md`: the design rules and why they exist
+4. `references/components.md`: when to use each component
+5. `references/extending.md`: only if the product needs something the system doesn't have
 
-## Workflow
+## How to work
 
-1. State the product's job and each screen's main user task in one line.
-2. Choose the layout's core idea in one sentence. When asked for several layouts, each must start from a different idea about what matters most (a different information hierarchy), not just different styling.
-3. **Write a component map before any code**: a short list of every region of the screen and the design-system component that fills it. Before writing custom markup, check these first: Nav (any navigation, tabs, sidebar), Avatar (any person or profile), Tag (any label, status or count), List (any repeated rows), Card, Modal (any overlay or sheet). A region with no matching component needs a one-line reason and follows `references/extending.md`.
-4. Build it as a runnable React view that imports from `design-system/components`. Follow the conventions in `products/README.md`. Use components through their props only. Layout wrappers (grid or flex with spacing tokens) are fine.
-5. If you changed anything inside `design-system/`, or invented any new style (a type treatment, size, icon or color use), append a line to `design-system/EXTENSIONS.md` before finishing.
-6. Run the checklist below and fix what fails.
-7. Report back: the core idea, the component map, and anything you extended and why.
+1. Say in one sentence what the screen's main goal is and which single action is primary.
+2. Say in one sentence what leads the layout. When asked for several layouts, each one starts from a different idea about what leads, not just different styling.
+3. Build with existing components first. Use tokens for every color, size, space, radius, shadow and duration.
+4. Check your work against the rules below.
+5. Report back: the idea, the primary action, and anything you added to the system.
 
-## Hard rules
+## Rules
 
-- Use tokens only. No hardcoded colors, font sizes, font weights, spacing, radii, shadows or durations. If a value is missing, follow `references/extending.md`. Don't inline it.
-- No brand or primary color. Emphasis comes from contrast: filled ink, then outline, then text only. Never add a colored action button.
-- The pastel tints (lavender, mint, sky) are for surfaces, hover/selected states and categories. Never for actions or text.
-- Font is Instrument Sans only.
-- Never pass `className` or `style` to a design-system component, and never restyle one with product CSS. If a component needs a variation, add a prop to the component (extending.md, rung 2) and log it.
-- Don't hand-build what a component already does. A custom nav bar, avatar, tag or list row where a component exists is a failure.
-- Don't nest cards, and don't wrap everything in a card.
-- `--shadow-1` (soft outline) is for cards. `--shadow-2` is only for floating layers (modals, sheets, popovers).
-- Motion uses the duration and easing tokens and respects `prefers-reduced-motion`.
-- Every interactive element has hover, focus-visible and disabled states, and inputs have labels.
-- Anything you invent (uppercase labels, glyph icons, new sizes) is an extension and must be logged. Follow `references/extending.md` for icons.
-
-## Checklist before finishing
-
-- [ ] The component map exists, and no region uses custom markup where a component fits
-- [ ] Run `grep -rnE "#[0-9a-fA-F]{3,8}"` on your files: no results
-- [ ] Run `grep -rnE "[0-9]+px"` on your CSS: only 1px/2px borders and outlines, and layout widths. Control, avatar and icon sizes must come from tokens or components
-- [ ] No `className` or `style` passed to design-system components
-- [ ] At most one filled (primary) button per region of the screen
-- [ ] The layout works at narrow and wide widths
-- [ ] Everything extended or invented is logged in `design-system/EXTENSIONS.md`
-- [ ] Cover the logo and it still looks like this system: mostly white, hairlines, soft tints, tight bold headings
+- No brand color. Tints (lavender, mint, sky) only tell elements apart, like avatars and category tags. Never for backgrounds, actions, hover or selected states.
+- A thin border goes around containers. Whitespace separates things inside them. No divider lines.
+- In each container one thing leads. The rest is gray and regular weight. Medium weight only when needed. Few font sizes per container.
+- One primary action per screen: the one that best serves the screen's main goal.
+- States use gray: hover is a lighter gray, selected is the darkest gray with medium weight.
+- Corners are 0, 4 or 8px, used consistently. Motion is subtle.
+- Don't restyle components with product CSS. If a component needs a variation, add a prop to the component.
+- When something is missing, add the smallest thing that works, and follow `references/extending.md`.
