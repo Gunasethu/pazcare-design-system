@@ -19,10 +19,11 @@
   text-decoration: none;
   transition: background var(--duration-base) var(--ease-standard);
 }
-.ds-nav__item:hover { background: var(--color-surface-hover); }
+.ds-nav__item:hover { background: var(--fill-hover, var(--color-fill-hover-canvas)); }
 .ds-nav__item--active {
   color: var(--color-text);
   font-weight: var(--text-label-weight);
+  background: var(--fill-selected, var(--color-fill-selected-canvas));
 }
 .ds-nav__item:focus-visible {
   outline: 2px solid var(--color-focus-ring);

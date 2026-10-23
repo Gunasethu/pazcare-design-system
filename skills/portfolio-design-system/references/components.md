@@ -1,48 +1,15 @@
-## Reach for these first
-
-- Any top bar, tabs or sidebar: Nav, not custom links
-- Any person, profile or account: Avatar, not a styled circle
-- Any label, count or status: Tag
-- Any repeated rows: List and ListItem
-- Any overlay: Modal (`variant="sheet"` on narrow screens)
-
 # Components
 
-Source of truth is the code in `design-system/components/`. If this file and the code disagree, the code wins. Import everything from `design-system/components`.
+The code in `design-system/components/` is the source of truth. This file only says when to use each one. Open a component's files before using it.
 
-## Button
-- Props: `variant` (`primary` | `secondary` | `ghost`), `size` (`md` | `sm`), plus normal button props.
-- Primary is filled ink (the loudest). Secondary is outlined. Ghost is text only.
-- Use at most one primary per region. Use ghost for low-priority actions like Cancel or Close.
-
-## Input
-- Props: `label`, `hint`, `error`, plus normal input props.
-- Single line only. For multi-line text see `extending.md`.
-- Always give inputs a label.
-
-## Card
-- Props: `as`.
-- Plain cards use the soft outline shadow.
-- A card is a distinct thing (a book, a stat, a project). Don't nest cards. Don't wrap everything in cards.
-
-## Tag
-- Props: `tint` (`neutral` | `lavender` | `mint` | `sky`).
-- Small, regular weight, non-interactive. For categories, counts and status.
-
-## Nav
-- Props: `items` (`{ label, href, active, onClick, trailing }`), `orientation` (`horizontal` | `vertical`), `label`.
-- Default text is muted gray, hover uses a subtle gray surface, and active text uses ink with medium weight. `trailing` holds things like unread counts.
-
-## List and ListItem
-- `List` has no additional props beyond normal `<ul>` props.
-- `ListItem` props: `leading`, `title`, `description`, `trailing`, `selected`, `onClick`. With `onClick` the row becomes a button.
-- Hover rows use the same subtle gray surface as Nav. Selected rows use ink with medium weight. Rows have no divider lines. Use List for repeated rows of the same shape.
-
-## Modal
-- Props: `open`, `onClose`, `title`, `footer`, `variant` (`modal` | `sheet`).
-- `modal` is centered. `sheet` rises from the bottom, and is the right choice on narrow screens.
-- Built on the native `<dialog>`, so Esc and focus trapping work.
-
-## Avatar
-- Props: `src`, `name`, `size` (`sm` 24px | `md` 32px | `lg` 48px), `tint`.
-- Falls back to initials on a tinted circle. Pick the tint deliberately. Don't hash names to colors.
+- **Button:** any action. One primary per screen, with an icon. Other actions are secondary. A text-only (ghost) button needs an icon. Not for moving between sections (use Nav).
+- **Input and Textarea:** single-line and multi-line text. Always labeled.
+- **Card:** one distinct thing (a book, a stat, a project). Never nested, and never wrapped around every row.
+- **Tag:** a category or status label. Not interactive. At most one accent per container.
+- **Count:** a number attached to a label (unread, item totals).
+- **Avatar and AvatarGroup:** any person. Several people together use AvatarGroup.
+- **Icon:** only icons from the set, and only when they carry meaning or an action.
+- **Nav:** any navigation: top bar, tabs, sidebar. Not for actions.
+- **List and ListItem:** repeated rows of the same shape. Use `bordered` when the list itself is the container.
+- **Modal:** overlays. Use the sheet variant on narrow screens.
+- **Page:** the wrapper for every layout. It gives one left edge and consistent widths.

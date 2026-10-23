@@ -9,6 +9,7 @@ export function Nav({ items, orientation = 'horizontal', label = 'Main', ...prop
             <a
               className={`ds-nav__item${item.active ? ' ds-nav__item--active' : ''}`}
               href={item.href || '#'}
+              title={item.description}
               aria-current={item.active ? 'page' : undefined}
               onClick={item.onClick}
             >

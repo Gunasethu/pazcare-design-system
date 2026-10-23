@@ -1,8 +1,8 @@
 import './List.css';
 
-export function List({ children, ...props }) {
+export function List({ children, className = '', bordered = false, ...props }) {
   return (
-    <ul className="ds-list" {...props}>
+    <ul className={`ds-list${bordered ? ' ds-list--bordered' : ''}${className ? ` ${className}` : ''}`} {...props}>
       {children}
     </ul>
   );

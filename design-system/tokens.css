@@ -1,14 +1,27 @@
 :root {
   /* ---------- COLOR (extracted) ---------- */
   --color-bg: #FFFFFF;
-  --color-border: #D4D4D4;
+  /* COLOR (proposed): page and container surfaces */
+  --color-canvas: #F5F5F5;
+  --color-surface: #FFFFFF;
+  --color-border: #e5e5e5;
   --color-text: #242424;
   --color-text-muted: #7A7A7A;
   --color-text-hover: #404040; /* hover gray, between muted and ink */
   --color-surface-hover: #F0F0F0;
+  /* COLOR (proposed): interaction fills on white surfaces */
+  --color-fill-hover: #F5F5F5;
+  --color-fill-selected: #f1f1f1;
+  /* COLOR (proposed): interaction fills on the canvas */
+  --color-fill-hover-canvas: #EBEBEB;
+  --color-fill-selected-canvas: #DEDEDE;
   --color-tint-lavender: #F0EDFF;
   --color-tint-mint: #DFF5F5;
   --color-tint-sky: #E3F1FF;
+  /* COLOR (proposed): chart data */
+  --color-data-lavender: #B3A6F2;
+  --color-data-mint: #8FD6D6;
+  --color-data-sky: #94C5F2;
 
   /* COLOR (proposed) */
   --color-text-inverse: #FFFFFF;   /* text on dark buttons */
@@ -50,6 +63,8 @@
   /* SPACING (proposed) */
   --space-6: 48px;
   --space-7: 64px;
+  /* SIZE (proposed): shared page content width */
+  --size-page-max: 1200px;
 
   /* ---------- RADIUS (extracted) ---------- */
   --radius-0: 0px;

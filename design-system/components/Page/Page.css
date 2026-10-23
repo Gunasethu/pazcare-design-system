@@ -1,0 +1,10 @@
+.ds-page {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: min(100% - 2 * var(--space-5), 1120px);
+  margin-inline: auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: var(--space-5);
+}

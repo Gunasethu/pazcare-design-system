@@ -26,9 +26,7 @@ export function Modal({ open, onClose, title, children, footer, variant = 'modal
       <div className="ds-modal__panel">
         <div className="ds-modal__header">
           <h2 id={titleId}>{title}</h2>
-          <Button variant="ghost" size="sm" aria-label="Close" onClick={onClose}>
-            ✕
-          </Button>
+          <Button variant="ghost" size="sm" icon="close" iconOnly aria-label="Close" onClick={onClose} />
         </div>
         <div className="ds-modal__body">{children}</div>
         {footer && <div className="ds-modal__footer">{footer}</div>}

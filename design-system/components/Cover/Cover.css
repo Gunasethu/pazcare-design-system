@@ -1,0 +1,14 @@
+.ds-cover {
+  display:inline-block;
+  flex:0 0 auto;
+  aspect-ratio:2 / 3;
+  background:linear-gradient(145deg, #eeeeee, #dedede);
+  border:1px solid #d8d8d8;
+  border-radius:var(--radius-1);
+  position:relative;
+  overflow:hidden;
+}
+.ds-cover img { display:block; width:100%; height:100%; object-fit:cover; }
+.ds-cover--sm { width:40px; }
+.ds-cover--md { width:56px; }
+.ds-cover--lg { width:128px; }

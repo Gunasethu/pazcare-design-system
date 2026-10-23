@@ -4,9 +4,9 @@
   padding: 0;
   border: 0;
   border-radius: var(--radius-2);
-  background: var(--color-bg);
+  background: var(--color-surface);
   color: var(--color-text);
-  box-shadow: var(--shadow-2);
+  box-shadow: none;
   overflow: auto;
 }
 .ds-modal--sheet {

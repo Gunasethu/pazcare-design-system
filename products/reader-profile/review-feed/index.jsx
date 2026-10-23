@@ -1,0 +1,30 @@
+import { Avatar, Button, Card, Count, Cover, Icon, Inline, Nav, Page, Stack, Tag } from '../../../design-system/components';
+import './review-feed.css';
+
+export const idea = 'A review feed leads the profile, treating the reader’s notes and recommendations as the most useful part of the page.';
+export const order = 6;
+
+export default function ReviewFeedLayout() {
+  return <Page className="reader-page review-profile">
+    <main className="reader-content">
+      <div className="review-layout">
+        <section className="review-main-col">
+          <header className="profile-heading"><Avatar name="Nina Shah" size="lg" tint="lavender" /><div><p className="profile-location">Reader profile</p><h1>Nina Shah</h1><p>146 books · 14 reviews this year · Portland, Oregon</p></div><Button variant="secondary" icon="pencil" size="sm">Edit profile</Button></header>
+          <Card className="review-feed-card"><div className="feed-heading"><div><p className="section-kicker">From the shelves</p><h2>Recent reviews</h2></div><Button size="sm" icon="plus">Write a review</Button></div>
+            <article className="feed-review"><Cover size="md" src="/covers/intermezzo.jpg" alt="Intermezzo by Sally Rooney" /><div><div className="feed-review-top"><Inline gap={2}><Tag tint="lavender">Fiction</Tag><span className="review-date">October 18, 2026</span></Inline><div className="stars">★★★★☆ <span>4 stars</span></div></div><h3>Intermezzo</h3><p className="book-byline">by Sally Rooney</p><p className="review-text">I loved how this book gives grief time to be strange and ordinary. The brothers circle one another in ways that feel painfully familiar, and every conversation seems to carry the one they’re avoiding.</p><span className="helpful-count">12 people found this helpful</span></div></article>
+            <article className="feed-review"><Cover size="md" src="/covers/orbital.jpg" alt="Orbital by Samantha Harvey" /><div><div className="feed-review-top"><Inline gap={2}><Tag tint="lavender">Fiction</Tag><span className="review-date">October 6, 2026</span></Inline><div className="stars">★★★★★ <span>5 stars</span></div></div><h3>Orbital</h3><p className="book-byline">by Samantha Harvey</p><p className="review-text">Small and expansive at once. I kept rereading the last page, then looking out the window for a while.</p><span className="helpful-count">8 people found this helpful</span></div></article>
+            <article className="feed-review"><Cover size="md" src="/covers/the-art-of-noticing.jpg" alt="The Art of Noticing by Rob Walker" /><div><div className="feed-review-top"><Inline gap={2}><Tag tint="lavender">Nonfiction</Tag><span className="review-date">September 29, 2026</span></Inline><div className="stars">★★★★☆ <span>4 stars</span></div></div><h3>The Art of Noticing</h3><p className="book-byline">by Rob Walker</p><p className="review-text">A generous nudge to pay attention to the ordinary details that become a life.</p><span className="helpful-count">5 people found this helpful</span></div></article>
+            <a className="all-reviews" href="#all-reviews">All reviews <Icon name="arrow-right" /></a>
+          </Card>
+          <Card className="currently-reading-card"><div className="section-heading"><div><p className="section-kicker">A little more context</p><h2>Currently reading</h2></div><a href="#books" className="subtle-link">All books <Icon name="arrow-right" /></a></div><div className="current-books"><article><Cover size="md" src="/covers/the-creative-act.jpg" alt="The Creative Act by Rick Rubin" /><div><strong>The Creative Act</strong><span>Rick Rubin</span><Tag>43% read</Tag></div></article><article><Cover size="md" src="/covers/north-woods.jpg" alt="North Woods by Daniel Mason" /><div><strong>North Woods</strong><span>Daniel Mason</span><Tag>Reading</Tag></div></article><article><Cover size="md" src="/covers/ways-of-seeing.jpg" alt="Ways of Seeing by John Berger" /><div><strong>Ways of Seeing</strong><span>John Berger</span><Tag>Reading</Tag></div></article></div></Card>
+        </section>
+        <aside className="review-side-col">
+          <Card className="reading-challenge"><p className="section-kicker">2026 reading challenge</p><div className="challenge-number"><strong>18</strong><span>of 24 books</span></div><div className="challenge-track"><span style={{ width: '75%' }} /></div><p>Six more books to reach the goal.</p><a className="subtle-link" href="#challenge">View challenge <Icon name="arrow-right" /></a></Card>
+          <Card className="shelf-card"><div className="section-heading"><h2>Shelves</h2><Count>6</Count></div><Nav orientation="vertical" label="Book shelves" items={[{ label: 'All books', active: true, trailing: <Count>146</Count> }, { label: 'Want to read', trailing: <Count>28</Count> }, { label: 'Read', trailing: <Count>115</Count> }, { label: 'Favorites', trailing: <Count>12</Count> }]} /></Card>
+          <Card className="review-stats"><p className="section-kicker">Reading stats</p><h2>Books and pages</h2><div className="stat-feature"><strong>18</strong><span>books finished this year</span></div><div className="stat-small"><div><strong>5,482</strong><span>pages</span></div><div><strong>4.1</strong><span>average rating</span></div></div></Card>
+          <Card className="favorite-shelf"><div className="section-heading"><div><p className="section-kicker">A shelf to browse</p><h2>Recent favorites</h2></div><a className="subtle-link" href="#favorites">See all</a></div><Stack gap={3}><div className="favorite-book"><Cover size="sm" src="/covers/beloved.jpg" alt="Beloved by Toni Morrison" /><span><strong>Beloved</strong><small>Toni Morrison</small></span></div><div className="favorite-book"><Cover size="sm" src="/covers/piranesi.jpg" alt="Piranesi by Susanna Clarke" /><span><strong>Piranesi</strong><small>Susanna Clarke</small></span></div><div className="favorite-book"><Cover size="sm" src="/covers/sea-of-tranquility.jpg" alt="Sea of Tranquility by Emily St. John Mandel" /><span><strong>Sea of Tranquility</strong><small>Emily St. John Mandel</small></span></div></Stack></Card>
+        </aside>
+      </div>
+    </main>
+  </Page>;
+}

@@ -1,0 +1,2 @@
+.ds-inline { display:flex; align-items:center; flex-wrap:wrap; min-width:0; row-gap:var(--space-1); }
+.ds-inline--gap-1 { column-gap:var(--space-1); }.ds-inline--gap-2 { column-gap:var(--space-2); }.ds-inline--gap-3 { column-gap:var(--space-3); }.ds-inline--gap-4 { column-gap:var(--space-4); }.ds-inline--gap-5 { column-gap:var(--space-5); }
