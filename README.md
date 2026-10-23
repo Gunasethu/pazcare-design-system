@@ -21,13 +21,14 @@ A design system extracted from my portfolio, a reusable skill that lets an AI ag
 
 ## Layouts I'd take forward
 
-- **Messaging:** [layout name]. [One or two sentences on why.]
-- **Reading profile:** [layout name]. [One or two sentences on why.]
+- **Messaging: Threads.** It's the layout that carries its idea best: the thread fills the center, the channel is only context, and replies sit nested inside it, so you read one conversation top to bottom. It also needs the fewest extras to work, with one clear action (Reply) and a composer right under the thread.
+- **Reading profile: Current read.** It leads with what the reader is doing right now (the book, how far along, one action to update progress), then puts the stats and shelves around it in a clear order. It's also the layout where covers, states, surfaces and spacing follow my system most closely.
 
 ## How I worked
 
-I used AI to draft code, and I made the design decisions: the tokens, the principles, and the rules that changed after I reviewed the output. I tested the skill on a brief it had never seen (a habit tracker), reviewed six layouts against my own principles, and turned each problem into a rule or a system change.
-
+- This was my first time creating SKILLS. I spent most of the first day going through articles, official documentation from CHATGPT - reading what each file does, when and how to use them. 
+- Then initially I used AI to create a react setup, setup components, create skill files (SKILLs.md, Reference.md) and I made the design decisions: the tokens, the principles, and the rules that changed after I reviewed the output. I tested the skill on a brief it had never seen (a habit tracker), reviewed six layouts against my own principles, and turned each problem into a rule or a system change.
+  
 ## Known issues
 
 The skill doesn't yet produce consistently good layouts from a bare brief. In the latest run:
@@ -39,6 +40,6 @@ The skill doesn't yet produce consistently good layouts from a bare brief. In th
 Likely causes: the skill's rules are advice, not checks, and in an earlier run the agent skipped reading the component files.
 
 What I'd do next:
-1. Add a Rating component.
-2. Have the skill check each layout against a short checklist before finishing: components used, tokens only, copy rule, and distinct ideas across layouts.
-3. Test on more unseen briefs, and add a rule for each failure.
+1. Have the skill check each layout against a short checklist before finishing: components used, tokens only, copy rule, and distinct ideas across layouts.
+2. Test on more unseen briefs, and add a rule for each failure.
+3. Ask AI to which skills it referenced, which it skipped. 
