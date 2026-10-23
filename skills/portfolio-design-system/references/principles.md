@@ -1,27 +1,15 @@
 # Principles
 
-## The feeling
+These come from how the portfolio was designed. Each one says what to do and why.
 
-Calm, airy, editorial. Mostly white, ink-black text. Structure comes from whitespace and hairlines, not heavy boxes or color. Headings are tight and confident, body text is generous. Color is rare and soft.
+1. **Don't overwhelm.** Don't highlight everything. If everything stands out, nothing does. When a section feels too text-heavy, pair the text with a visual element.
 
-## Principles
+2. **Color is information, not decoration.** The pastel tints (lavender, mint, sky) tell elements apart: avatars, tags of different categories. Never use them for backgrounds or for actions like CTAs and tabs.
 
-1. **Contrast is emphasis.** Filled ink is the loudest, outline is medium, text-only is quiet. There is no brand color.
-2. **Color is quiet.** The three pastel tints mark surfaces, hover/selected states and categories. They are never alerts, brand marks or actions.
-3. **Edges are soft and thin.** Use a 1px `--color-border` or the soft outline `--shadow-1`, not both on the same element. Radii are small: 4px for small things (tags, nav items), 8px for containers, full only for avatars.
-4. **Space does the grouping.** Use the spacing scale (4, 8, 16, 24, 32, with 48 and 64 for page-level gaps). Things that belong together sit closer together.
-5. **Type is simple.** Instrument Sans. Bold, tightly tracked headings. 18px regular body. 14px and 12px for UI text and captions. Muted color for secondary information.
-6. **Motion is short and useful.** 120 to 320ms. Things entering use ease-out. Nothing bounces or loops.
+3. **Borders hold containers. Whitespace separates things.** A thin border goes around a container to define it. Never use a border as a divider between elements. Use space instead. Space should feel breathable and can tighten in compact UI, depending on what the screen needs. Corners are small (0, 4, 8px), which gives an edgy feel. The rule is consistency: the same kind of element always gets the same radius.
 
-## How states are expressed
+4. **One thing leads.** In any card or container, one main piece of text stands out (for a food card: the name and price). Everything else is secondary: gray and regular weight. Use medium weight only when a piece of text needs a little more emphasis. Avoid many font sizes inside one container.
 
-- Hover and selected: lavender tint
-- Focus: 2px ink outline, offset 2px
-- Error: `--color-danger`, the only red in the system
-- Disabled: reduced opacity
+5. **One primary action per screen: the one that best helps the user reach the screen's main goal.** Checkout: Place order. Loan application: Submit application. Employee dashboard: Add employee. Everything else is secondary or ghost.
 
-## Draft decisions to revisit
-
-- Lavender is used for both hover and selected. Decide whether selected needs to look different.
-- The danger red and the overlay color were added. They aren't in the original portfolio.
-- Small text sizes (14px, 12px) were added for UI density.
+6. **Motion is subtle.** Short, quiet transitions. Nothing that draws attention to itself.
